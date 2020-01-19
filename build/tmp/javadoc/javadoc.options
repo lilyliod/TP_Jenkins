@@ -1,0 +1,9 @@
+-classpath 'C:\\Users\\Lilyliod\\Documents\\IdeaProjects\\TP6\\build\\classes\\java\\main;C:\\Users\\Lilyliod\\Documents\\IdeaProjects\\TP6\\build\\resources\\main'
+-d 'C:\\Users\\Lilyliod\\Documents\\IdeaProjects\\TP6\\build\\docs\\javadoc'
+-doctitle 'TP6 1.0-SNAPSHOT API'
+-notimestamp 
+-quiet 
+-windowtitle 'TP6 1.0-SNAPSHOT API'
+'C:\\Users\\Lilyliod\\Documents\\IdeaProjects\\TP6\\src\\main\\java\\com\\example\\exception\\NoSquareException.java'
+'C:\\Users\\Lilyliod\\Documents\\IdeaProjects\\TP6\\src\\main\\java\\com\\example\\model\\Matrix.java'
+'C:\\Users\\Lilyliod\\Documents\\IdeaProjects\\TP6\\src\\main\\java\\com\\example\\service\\MatrixMathematics.java'
