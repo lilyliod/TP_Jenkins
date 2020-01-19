@@ -8,4 +8,7 @@ pipeline {
     }
 
   }
+  environment {
+    PATH = 'C:\\\\Windows\\\\System32'
+  }
 }
