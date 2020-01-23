@@ -3,12 +3,12 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        bat 'gradle build'
+        bat 'gradle'
       }
     }
 
   }
   environment {
-    PATH = '%SystemRoot%\\system32'
+    PATH = 'C:\\Windows\\System32'
   }
 }
