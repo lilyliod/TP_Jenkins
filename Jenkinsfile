@@ -9,6 +9,6 @@ pipeline {
 
   }
   environment {
-    PATH = 'C:\\Windows\\System32'
+    PATH = '%SystemRoot%\\system32'
   }
 }
