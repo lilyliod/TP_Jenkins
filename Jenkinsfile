@@ -43,6 +43,12 @@ pipeline {
       }
     }
 
+    stage('Slack Notification') {
+      steps {
+        slackSend(baseUrl: 'https://hooks.slack.com/services/', token: 'TRPDUDA3W/BT3TW4FL4/ansqMeLbQRUiLG9c9wWscMo3', message: 'Deployed !!!', teamDomain: 'esi-kqe6415')
+      }
+    }
+
   }
   environment {
     PATH = 'C:\\Windows\\System32'
