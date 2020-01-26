@@ -11,6 +11,12 @@ pipeline {
       }
     }
 
+    stage('Mail Notification') {
+      steps {
+        mail(subject: 'Mail Notifs', body: 'I hope it works!', to: 'fl_ait_zerrouk@esi.dz')
+      }
+    }
+
   }
   environment {
     PATH = 'C:\\Windows\\System32'
