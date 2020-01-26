@@ -21,9 +21,9 @@ pipeline {
       steps {
         withSonarQubeEnv('sonar') {
           bat 'C:\\gradle-6.0.1\\bin\\gradle sonarqube'
-          waitForQualityGate true
         }
 
+        waitForQualityGate(abortPipeline: true, webhookSecretId: 'http://localhost:8080/jenkins/sonarqube-webhook/')
       }
     }
 
