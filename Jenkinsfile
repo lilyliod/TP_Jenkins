@@ -39,7 +39,7 @@ pipeline {
 
     stage('Deployment') {
       steps {
-        bat 'C:\\gradle-6.0.1\\bin\\gradle uploadArchives'
+        bat 'C:\\gradle-6.0.1\\bin\\gradle publish'
       }
     }
 
