@@ -37,6 +37,12 @@ pipeline {
       }
     }
 
+    stage('Deployment') {
+      steps {
+        bat 'C:\\gradle-6.0.1\\bin\\gradle uploadArchives'
+      }
+    }
+
   }
   environment {
     PATH = 'C:\\Windows\\System32'
