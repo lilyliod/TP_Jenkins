@@ -17,6 +17,15 @@ pipeline {
       }
     }
 
+    stage('') {
+      steps {
+        withSonarQubeEnv('sonar') {
+          bat 'C:\\gradle-6.0.1\\bin\\gradle sonarqube'
+        }
+
+      }
+    }
+
   }
   environment {
     PATH = 'C:\\Windows\\System32'
