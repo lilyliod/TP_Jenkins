@@ -37,9 +37,15 @@ pipeline {
       }
     }
 
-    stage('Pull Request') {
+    stage('Deployment') {
       steps {
-        git(branch: 'master', url: 'https://github.com/lilyliod/TP_Jenkins')
+        bat 'C:\\gradle-6.0.1\\bin\\gradle'
+      }
+    }
+
+    stage('Slack Notification') {
+      steps {
+        slackSend(baseUrl: 'https://hooks.slack.com/services/', channel: 'tp-gradle', message: 'It\'s updated !', token: 'TRPDUDA3W/BTDCS7E95/68VfVLTBHzO2SDJEBC8eWCiL', teamDomain: 'esi-kqe6415')
       }
     }
 
