@@ -96,7 +96,7 @@ public class MatrixMathematics {
 	}
 
 	public static Matrix inverse(Matrix matrix) throws NoSquareException {
-		int det = determinant(matrix);
+		double det = determinant(matrix);
 		if (det!=0) return (transpose(cofactor(matrix)).multiplyByConstant(1.0/det));
 		else return null;
 	}
