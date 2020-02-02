@@ -94,7 +94,7 @@ public class MatrixMathematics {
 		}
 		return transposedMatrix;
 	}
-
+// This is working now !
 	public static Matrix inverse(Matrix matrix) throws NoSquareException {
 		double det = determinant(matrix);
 		if (det!=0) return (transpose(cofactor(matrix)).multiplyByConstant(1.0/det));
