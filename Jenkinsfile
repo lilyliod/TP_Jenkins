@@ -31,7 +31,7 @@ pipeline {
 
         stage('Test Reporting') {
           steps {
-            jacoco()
+            jacoco(execPattern: 'build/jacoco/*.exec')
           }
         }
 
@@ -39,14 +39,18 @@ pipeline {
     }
 
     stage('Deployment') {
-      when { branch 'master'}
+      when {
+        branch 'master'
+      }
       steps {
         bat 'C:\\gradle-6.0.1\\bin\\gradle publish'
       }
     }
 
     stage('Slack Notification') {
-      when { branch 'master'}
+      when {
+        branch 'master'
+      }
       steps {
         slackSend(baseUrl: 'https://hooks.slack.com/services/', channel: 'tp-gradle', message: 'It\'s updated !', token: 'TRPDUDA3W/BTDCS7E95/68VfVLTBHzO2SDJEBC8eWCiL', teamDomain: 'esi-kqe6415')
       }
