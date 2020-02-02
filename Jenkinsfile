@@ -106,6 +106,6 @@ pipeline {
       }
     }
 
->>>>>>> new/master
+new/master
   }
 }
