@@ -1,7 +1,6 @@
 pipeline {
   agent any
   stages {
-<<<<<<< HEAD
     stage('build') {
       steps {
         bat 'C:\\gradle-6.0.1\\bin\\gradle build'
